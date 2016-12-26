@@ -15,7 +15,7 @@ if [ -f "$ENV_DIR/BONSAI_URL" ]; then
 elif [ -f "$ENV_DIR/ELASTICSEARCH_URL" ]; then
   ELASTICSEARCH_URL=$(cat $ENV_DIR/ELASTICSEARCH_URL)
 else
-  ELASTICSEARCH_URL="http://localhost:9200"
+  ELASTICSEARCH_URL="https://thxg2pz0:f6m6igabvaxl9z8x@jasmine-1172611.us-east-1.bonsaisearch.net"
 fi
 
 if [ -f "$ENV_DIR/DOWNLOAD_URL" ]; then
