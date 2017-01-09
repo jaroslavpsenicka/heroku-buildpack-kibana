@@ -59,7 +59,7 @@ fi
 $extract $CACHE_DIR/$KIBANA_PACKAGE
 
 echo "-----> Configuring ELASTICSEARCH_URL"
-echo "elasticsearch.url=${ELASTICSEARCH_URL}">>$KIBANA_DIR/config/kibana.yml
+echo "elasticsearch.url: \"${ELASTICSEARCH_URL}\"">>$KIBANA_DIR/config/kibana.yml
 cat $KIBANA_DIR/config/kibana.yml | grep "elasticsearch.url"
 
 echo "Exporting PATH" | indent
