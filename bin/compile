@@ -10,19 +10,11 @@ ENV_DIR=$3
 
 INIT_SCRIPT="$BUILD_DIR/.profile.d/kibana.sh"
 
-if [ -f "$ENV_DIR/BONSAI_URL" ]; then
-  ELASTICSEARCH_URL=$(cat $ENV_DIR/BONSAI_URL)
-elif [ -f "$ENV_DIR/ELASTICSEARCH_URL" ]; then
-  ELASTICSEARCH_URL=$(cat $ENV_DIR/ELASTICSEARCH_URL)
-else
-  ELASTICSEARCH_URL="https://c4cclqx90k:4wsz5bkzyg@toyo-test-7959878724.us-west-2.bonsaisearch.net"
-fi
+ELASTICSEARCH_URL=$(cat $ENV_DIR/ELASTICSEARCH_URL)
+DOWNLOAD_URL=$(cat $ENV_DIR/DOWNLOAD_URL)
 
-if [ -f "$ENV_DIR/DOWNLOAD_URL" ]; then
-  DOWNLOAD_URL=$(cat $ENV_DIR/DOWNLOAD_URL)
-else
-  DOWNLOAD_URL="https://download.elastic.co/kibana/kibana/kibana-4.6.2-linux-x86_64.tar.gz"
-fi
+echo "ELASTICSEARCH_URL=$ELASTICSEARCH_URL"
+echo "DOWNLOAD_URL=$DOWNLOAD_URL"
 
 KIBANA_PACKAGE=${DOWNLOAD_URL##*/}
 
