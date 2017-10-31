@@ -62,7 +62,7 @@ $extract $CACHE_DIR/$KIBANA_PACKAGE
 
 echo "-----> Configuring ELASTICSEARCH_URL "
 #$configure $KIBANA_DIR/config/kibana.yml
-echo "elasticsearch.url: \"https://1z107fl2:1xlkw83tag4e21nb@cherry-5194202.eu-west-1.bonsaisearch.net\"" > $KIBANA_DIR/config/kibana.yml
+echo "elasticsearch.url: \"https://1z107fl2:1xlkw83tag4e21nb@cherry-5194202.eu-west-1.bonsaisearch.net:80/\"" > $KIBANA_DIR/config/kibana.yml
 
 
 echo "Exporting PATH" | indent
