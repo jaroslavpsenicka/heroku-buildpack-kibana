@@ -62,8 +62,9 @@ $extract $CACHE_DIR/$KIBANA_PACKAGE
 
 echo "-----> Configuring ELASTICSEARCH_URL "
 #$configure $KIBANA_DIR/config/kibana.yml
-echo "elasticsearch.url: \"https://1z107fl2:1xlkw83tag4e21nb@cherry-5194202.eu-west-1.bonsaisearch.net:443/\"" > $KIBANA_DIR/config/kibana.yml
-
+echo "elasticsearch.url: \"https://cherry-5194202.eu-west-1.bonsaisearch.net:443/\"" > $KIBANA_DIR/config/kibana.yml
+echo "elasticsearch.username: \"1z107fl2\"" >> $KIBANA_DIR/config/kibana.yml
+echo "elasticsearch.password: \"1xlkw83tag4e21nb\"" >> $KIBANA_DIR/config/kibana.yml
 
 echo "Exporting PATH" | indent
 echo 'export PATH="$PATH:'${KIBANA_DIR##*/}'/bin"' > $INIT_SCRIPT
